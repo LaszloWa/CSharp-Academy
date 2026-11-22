@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: Math Game Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/Math Game/bin/Debug/net10.0/Math Game.dll",
+            "cwd": "${workspaceFolder}/Math Game",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        }
+    ]
+}
