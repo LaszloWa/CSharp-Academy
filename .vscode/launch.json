@@ -14,7 +14,7 @@
             "name": "C#: Calculator Debug",
             "type": "coreclr",
             "request": "launch",
-            "program": "${workspaceFolder}/Math Game/bin/Debug/net10.0/CalculatorApp.dll",
+            "program": "${workspaceFolder}/CalculatorApp/bin/Debug/net11.0/CalculatorApp.dll",
             "cwd": "${workspaceFolder}/CalculatorApp",
             "console": "integratedTerminal",
             "stopAtEntry": false
