@@ -82,10 +82,19 @@ class Program
 
             // Wait for the user to respond before closing.
             Console.Write(
-                "Press 'n' and Enter to close the app, or press any other key and Enter to continue: "
+                "Press 'n' and Enter to close the app, 'del' and enter to delete previous calculations, or press any other key and Enter to continue: "
             );
-            if (Console.ReadLine() == "n")
+
+            string? userInput = Console.ReadLine();
+
+            if (userInput == "n")
+            {
                 endApp = true;
+            }
+            else if (userInput == "del")
+            {
+                calculator.DeletePreviousCalculations();
+            }
 
             Console.WriteLine("\n"); // Friendly linespacing.
         }

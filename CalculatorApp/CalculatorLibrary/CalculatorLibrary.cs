@@ -6,10 +6,11 @@ namespace CalculatorLibrary
     public class Calculator
     {
         JsonWriter writer;
+        readonly string previousCalculationsFile = "calculator.json";
 
         public Calculator()
         {
-            StreamWriter logFile = File.CreateText("calculator.json");
+            StreamWriter logFile = File.CreateText(previousCalculationsFile);
             logFile.AutoFlush = true;
             writer = new JsonTextWriter(logFile);
             writer.Formatting = Formatting.Indented;
@@ -87,6 +88,26 @@ namespace CalculatorLibrary
             usageAmount++;
 
             File.WriteAllText(counterPath, usageAmount.ToString());
+        }
+
+        public void DeletePreviousCalculations()
+        {
+            if (File.Exists(previousCalculationsFile))
+            {
+                try
+                {
+                    File.Delete(previousCalculationsFile);
+                    Console.WriteLine("File deleted successfully!");
+                }
+                catch
+                {
+                    Console.WriteLine("Something went wrong deleting the file");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Nothing to delete. Please perform operations first.");
+            }
         }
     }
 }
