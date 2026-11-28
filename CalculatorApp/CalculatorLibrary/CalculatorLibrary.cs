@@ -60,6 +60,8 @@ namespace CalculatorLibrary
             writer.WriteValue(result);
             writer.WriteEndObject();
 
+            RecordUse();
+
             return result;
         }
 
@@ -69,6 +71,22 @@ namespace CalculatorLibrary
             writer.WriteEndArray();
             writer.WriteEndObject();
             writer.Close();
+        }
+
+        public void RecordUse()
+        {
+            string counterPath = "usageRecord.log";
+
+            int usageAmount = 0;
+
+            if (File.Exists(counterPath))
+            {
+                int.TryParse(File.ReadAllText(counterPath), out usageAmount);
+            }
+
+            usageAmount++;
+
+            File.WriteAllText(counterPath, usageAmount.ToString());
         }
     }
 }
