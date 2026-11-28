@@ -1,0 +1,2 @@
+<u>Friday, 27.11.2026:</u> Finished the required portion of 2, the Microsoft tutorial. Learned more about using the debugging tools.
+<u>Saturday, 28.11.2026:</u> Instead of moving on to the next task, I decided to implement the challenges for project 2, adding additional functionality to the calculator. Today I added functionality to count number of uses of the calculator (which I read and write to file to persist), as well as storing previous operations and being able to delete that list. So I mainly learned about using the file system in practice.
